@@ -24,3 +24,21 @@ window.onclick = function (event) {
     }
 }
 
+
+const btnIconMenu = document.getElementById('btn-icon-menu')
+const btnActiveMenu = document.getElementById('btn-active-menu')
+
+
+function actionSlideMenu() {
+    if (btnIconMenu.innerHTML == 'menu') {
+        document.getElementById("sidenav").style.width = "250px";
+        btnIconMenu.innerHTML = 'close'
+        btnActiveMenu.setAttribute('title', 'Cerrar Menu')
+    } else {
+        document.getElementById("sidenav").style.width = "0";
+        btnIconMenu.innerHTML = 'menu'
+        btnActiveMenu.setAttribute('title', 'Abrir Menu')
+    }
+}
+
+
